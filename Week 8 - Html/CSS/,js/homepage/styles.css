@@ -1,0 +1,392 @@
+body {
+    color: white;
+    background-color: #16191b;
+}
+
+/* Nav-bar */
+.btn {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+.navbar-brand {
+    margin-left: 5px;
+
+}
+
+#hr_nav {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/* index */
+#index_img {
+    /* make it round*/
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 45%;
+}
+
+.index_text {
+    text-align: center;
+}
+
+#curved_text {
+    text-align: center;
+
+}
+
+span {
+    display: inline-block;
+    font-size: 4vw;
+/* curved text index top */
+}
+
+#p1 {
+    transform: translate(-80%, 160%) rotate(-50deg);
+}
+
+#r1 {
+    transform: translate(-120%, 141%) rotate(-45deg);
+}
+
+#o1 {
+    transform: translate(-80%, 112%) rotate(-40deg);
+}
+
+#f1 {
+    transform: translate(-160%, 91%) rotate(-35deg);
+}
+
+#e1 {
+    transform: translate(-85%, 70%) rotate(-30deg);
+}
+
+#s1 {
+    transform: translate(-90%, 52%) rotate(-25deg);
+}
+
+#s2 {
+    transform: translate(-70%, 40%) rotate(-20deg);
+}
+
+#i1 {
+    transform: translate(-80%, 33%) rotate(-15deg);
+}
+
+#o2 {
+    transform: translate(-25%, 27%) rotate(-10deg);
+}
+
+#n1 {
+    transform: translate(-20%, 23%) rotate(-5deg);
+}
+
+#a1 {
+    transform: translate(0%, 22%) rotate(5deg);
+}
+
+#l1 {
+    transform: translate(40%, 26%) rotate(10deg);
+}
+
+#d1 {
+    transform: translate(70%, 35%) rotate(15deg);
+}
+
+#r2 {
+    transform: translate(130%, 47%) rotate(20deg);
+}
+
+#e2 {
+    transform: translate(90%, 59%) rotate(25deg);
+}
+
+#a2 {
+    transform: translate(95%, 79%) rotate(30deg);
+}
+
+#m1 {
+    transform: translate(52%, 110%) rotate(37deg);
+}
+
+#e3 {
+    transform: translate(60%, 143%) rotate(40deg);
+}
+
+#r3 {
+    transform: translate(55%, 171%) rotate(50deg);
+}
+
+/* curved text bottom */
+#l2 {
+    transform: translate(180%, -140%) rotate(43deg);
+}
+
+#e4 {
+    transform: translate(110%, -130%) rotate(35deg);
+}
+
+#a3 {
+    transform: translate(100%, -105%) rotate(30deg);
+}
+
+#r4 {
+    transform: translate(130%, -90%) rotate(25deg);
+}
+
+#n2 {
+    transform: translate(70%, -75%) rotate(18deg);
+}
+
+#i2 {
+    transform: translate(130%, -52%) rotate(12deg);
+}
+
+#n3 {
+    transform: translate(65%, -55%) rotate(10deg);
+}
+
+#g1 {
+    transform: translate(65%, -47%) rotate(5deg);
+}
+
+#p2 {
+    transform: translate(110%, -42%) rotate(0deg);
+}
+
+#r5 {
+    transform: translate(200%, -45%) rotate(-5deg);
+}
+
+#o3 {
+    transform: translate(130%, -48%) rotate(-10deg);
+}
+
+#g2 {
+    transform: translate(130%, -57%) rotate(-15deg);
+}
+
+#r6 {
+    transform: translate(220%, -67%) rotate(-20deg);
+}
+
+#a4 {
+    transform: translate(155%, -83%) rotate(-25deg);
+}
+
+#m2 {
+    transform: translate(80%, -105%) rotate(-33deg);
+}
+
+#m3 {
+    transform: translate(60%, -140%) rotate(-38deg);
+}
+
+#e5 {
+    transform: translate(60%, -175%) rotate(-43deg);
+}
+
+#r7 {
+    transform: translate(30%, -200%) rotate(-48deg);
+}
+
+/* Cats */
+#carousel_cats {
+    margin-top: 5px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Story */
+h3 {
+    color: #c800ff;
+    text-decoration: underline;
+    text-align: center;
+
+}
+.story_grid {
+    display: grid;
+    
+    height: 85vh;
+    margin-left: 5px;
+
+    grid-template-areas:
+    "1 a a a"
+    "b b b 2"
+    "3 c c c"
+    "d d d 4"
+    "5 e e e"
+    "f f f 6"
+    "7 g g g";
+
+    grid-template-columns: repeat(4, 24%);
+    grid-template-rows: repeat(7, auto);
+}
+.story_img {
+    width: 75%;
+    height:75%;
+    object-fit: contain;
+    justify-content: center;
+}
+
+.story_card:nth-child(1) {
+    grid-area: 1;
+}
+
+.story_card:nth-child(2) {
+    grid-area: a;
+}
+
+.story_card:nth-child(3) {
+    grid-area: b;
+}
+
+.story_card:nth-child(4) {
+    grid-area: 2;
+}
+
+.story_card:nth-child(5) {
+    grid-area: 3;
+}
+
+.story_card:nth-child(6) {
+    grid-area: c;
+}
+
+.story_card:nth-child(7) {
+    grid-area: d;
+}
+
+.story_card:nth-child(8) {
+    grid-area: 4;
+}
+
+.story_card:nth-child(9) {
+    grid-area: 5;
+}
+
+.story_card:nth-child(10) {
+    grid-area: e;
+}
+
+.story_card:nth-child(11) {
+    grid-area: f;
+}
+
+.story_card:nth-child(12) {
+    grid-area: 6;
+}
+
+.story_card:nth-child(13) {
+    grid-area: 7;
+}
+
+.story_card:nth-child(14) {
+    grid-area: g;
+}
+
+/* Food */
+.loading {
+    display: none;
+}
+.food_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Base idea for grid and animation by Fireship.
+   Sourcecode and link to his video tutorial can be found at
+   https://github.com/fireship-io/224-animated-css-grid */
+.food-grid {
+    height: 85vh;
+    display: grid;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 5px;
+
+    grid-template-areas:
+    "c b a"
+    "d i h"
+    "e f g";
+
+    grid-template-rows: repeat(3, 33%);
+    grid-template-columns: repeat(3, 20%);
+
+    --stagger-delay: 500ms;
+
+}
+@keyframes cardEntrance {
+    from {
+        opacity: 0;
+        transform: scale(0.1);
+        filter: grayscale(100%);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+        filter: grayscale(0%);
+    }
+}
+.food-card {
+    animation: cardEntrance 1500ms ease-out;
+    animation-fill-mode: backwards;
+    position: center;
+}
+
+.food-card:nth-child(1) {
+    grid-area: a;
+    animation-delay: calc(1 * var(--stagger-delay));
+
+
+}
+.food-card:nth-child(2) {
+    grid-area: b;
+    animation-delay: calc(2 * var(--stagger-delay));
+
+
+}
+.food-card:nth-child(3) {
+    grid-area: c;
+    animation-delay: calc(3 * var(--stagger-delay));
+
+
+}
+.food-card:nth-child(4) {
+    grid-area: d;
+    animation-delay: calc(4 * var(--stagger-delay));
+
+
+}
+.food-card:nth-child(5) {
+    grid-area: e;
+    animation-delay: calc(5 * var(--stagger-delay));
+
+
+}
+.food-card:nth-child(6) {
+    grid-area: f;
+    animation-delay: calc(6 * var(--stagger-delay));
+
+
+}
+.food-card:nth-child(7) {
+    grid-area: g;
+    animation-delay: calc(7 * var(--stagger-delay));
+
+
+}
+.food-card:nth-child(8) {
+    grid-area: h;
+    animation-delay: calc(8 * var(--stagger-delay));
+
+
+}
+.food-card:last-child {
+    grid-area: i;
+    animation-delay: calc(9 * var(--stagger-delay));
+
+
+}

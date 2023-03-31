@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <!-- Bootstrap -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+        <title>Food</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <link href="styles.css" rel="stylesheet">
+
+        <script src="scripts.js"></script>
+
+
+
+
+    </head>
+    <body class="">
+        <nav class="navbar navbar-dark py-1">
+            <a class="navbar-brand" style="color: #c800ff">Oneiros</a>
+            <form class="form-inline">
+                <button class="btn btn-outline-secondary" type="button" id="btn_home" onclick="navigate(this.id)">Home</button>
+                <button class="btn btn-outline-secondary" type="button" id="btn_cats" onclick="navigate(this.id)">Cats</button>
+                <button class="btn btn-outline-secondary" type="button" id="btn_story" onclick="navigate(this.id)">Story</button>
+                <button class="btn btn-secondary" type="button" id="btn_food" onclick="navigate(this.id)">Food</button>
+            </form>
+        </nav>
+        <hr id="hr_nav">
+        
+        <section class="food-grid">
+            <div class="food-card"><img class="food_img" src="images/bread_2.jpg" alt="onion bread dough"></div>
+            <div class="food-card"><img class="food_img" src="images/bread_1.jpg" alt="Wheat bread with weed-leaf pattern in the crust."></div>
+            <div class="food-card"><img class="food_img" src="images/soup.jpg" alt="Noodle soup with meat and vegetables."></div>
+            <div class="food-card"><img class="food_img" src="images/pork_1.jpg" alt="Pork roast with crunchy crust."></div>
+            <div class="food-card"><img class="food_img" src="images/pork_2.jpg" alt="Pork roast with crunchy crust, red cabbage and potatoe dumplings"></div>
+            <div class="food-card"><img class="food_img" src="images/pasta_salad.jpg" alt="creamy pasta salad"></div>
+            <div class="food-card"><img class="food_img" src="images/sushi.jpg" alt="Sushi rolls filled with tuna salad."></div>
+            <div class="food-card"><img class="food_img" src="images/burger.jpg" alt="A burger with homemade bun"></div>
+            <div class="food-card"><img class="food_img" src="images/salmon_tartare.jpg" alt="Salmon tartare on rye bread, garnisched with trout caviar and lime."></div>
+        </section>
+
+        <script>
+            document.body.classList.add('loading');
+            document.onreadystatechange = () => {
+                if (document.readyState === 'complete') {
+                    showPage()
+                }
+            }
+            function showPage() {
+                document.body.classList.remove("loading")
+            }
+        </script>
+    </body>
+</html>
