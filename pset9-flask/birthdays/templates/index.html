@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="/static/styles.css" rel="stylesheet">
+        <title>Birthdays</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script>
+            function validateSubmit(){
+                var name = document.forms["submit_bday"]["name"].value
+                if (name == "" || name == "Name") {
+                    alert("Please enter a Name.");
+                    return false;
+                }
+                var date = document.forms["submit_bday"]["date"].value
+                if (date == "") {
+                    alert("Please selecet a Birthday.");
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Birthdays</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+
+                <h2>Add a Birthday</h2>
+                <!-- TODO: Create a form for users to submit a name, a month, and a day -->
+                <form method="post" name="submit_bday" onsubmit="return validateSubmit()">
+                    <input type="text" id="name" name="name" value="Name" onfocus="this.value=''" autocomplete="off">
+                    <input type="date" id="date" name="date">
+                    <input type="submit" name="request_type" value="Submit">
+                </form>
+            </div>
+
+            <div class="section">
+
+                <h2>All Birthdays</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Birthday (DD/MM/YYYY)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- TODO: Loop through the database entries to display them in this table -->
+                        {% for person in birthdays %}
+                            <tr>
+                                <td>{{ person.name }}</td>
+                                <td>{{ person.day }}.{{person.month}}.{{person.year}}</td>
+                                <td>
+                                    <form name="delete_birthday" method="post">
+                                        <input name="id" type="hidden" value="{{ person.id }}">
+                                        <input type="submit" id="delete" name="request_type" value="🗑️">
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </body>
+</html>

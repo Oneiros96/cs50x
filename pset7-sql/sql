@@ -1,0 +1,52 @@
+datatypes
+
+enum = column that stores limited set of values (e.g. column 'colours' that can store red green blue, but not purple )
+
+char = string with fixed length wich is requierd to be spezified e.g. CHAR(10)
+varchar = variable length, requiers to spezifie max length e.g. VARCHAR(99)
+
+operations
+
+insert
+
+INSERT INTO     e.g.    INSERT INTO
+<table>                 users
+(<column>)              (username, password, fullname)
+VALUES                  VALUES
+(<values>)              ('newman', 'USMAIL', 'Newman')
+
+select
+
+SELECT                      SELECT              SELECT
+<columns>                   idnum, fullname     *       //select * = every column
+FROM                        FROM
+<table>                     users
+WHERE       //optional      WHERE
+<condition>                 idnum < 12
+ODER BY     //optional
+<column>
+
+SELECT              SELECT
+<table.column>      users.fullname, moms.mother
+FROM                FROM
+<table1>            users
+JOIN                JOIN
+<table2>            moms
+ON                  ON
+<predicate>         users.username = moms.username //overlapping data e.g. both tables contain the username
+
+update
+
+UPDATE                  UPDATE
+<table>                 users
+SET                     SET
+<column> = <value>      password = '12345'
+WHERE                   WHERE
+<predicate>             idnum = 10
+
+delete
+
+DELETE FROM         DELETE FROM
+<table>             users
+WHERE               WHERE
+<predicate>         username = 'newman'
