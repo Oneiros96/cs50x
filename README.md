@@ -78,5 +78,5 @@ Visit [Scratch](https://scratch.mit.edu/) to try the file.
 
 
    - [birthdays](https://github.com/Oneiros96/cs50x/tree/main/Week%209%20-%20Flask/birthdays)
-   - finance<br>
-    W.I.P
+   - [finance](https://github.com/Oneiros96/cs50x/tree/main/Week%209%20-%20Flask/finance)
+    
