@@ -31,7 +31,7 @@ def index():
             name = request.form.get("name")
             date = request.form.get("date")
             db.execute("INSERT INTO birthdays (name, month, day, year) VALUES (?, ?, ?, ?)", name, date[5:7], date[8:10], date[0:4])
-        # TODO: If post request is from deleting entry, delete it in database
+        # If post request is from deleting entry, delete it in database
         if request_type == "🗑️":
             id = request.form.get("id")
             db.execute("DELETE FROM birthdays WHERE id = ?", id)

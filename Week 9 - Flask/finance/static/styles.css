@@ -1,0 +1,13 @@
+/* Size for brand */
+nav .navbar-brand
+{
+    font-size: xx-large;
+}
+
+/* Colors for brand */
+nav .navbar-brand .purple
+{
+    color: #7e21ce;
+}
+
+

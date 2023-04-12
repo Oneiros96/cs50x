@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    index
+{% endblock %}
+
+
+{% block main %}
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th class="text-start">Symbol</th>
+                <th class="text-start">Name</th>
+                <th class="textend">Shares</th>
+                <th class="textend">Price</th>
+                <th class="textend">Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for transaction in transactions %}
+                <tr>
+                    <td class="text-start">{{ transaction.symbol }}</td>
+                    <td class="text-start">{{ transaction.name }}</td>
+                    <td class="textend">{{ transaction.shares }}</td>
+                    <td class="textend">{{ transaction.price }}</td>
+                    <td class="textend">{{ transaction.date }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}
