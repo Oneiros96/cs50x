@@ -1,0 +1,186 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block script %}
+<script>
+    // Get the table element
+    const table = document.getElementById("user_table");
+    // Get all the table cells
+    const cells = table.getElementsByTagName("td");
+
+    // Loop through all the cells and apply CSS if they are empty
+    for (let i = 0; i < cells.length; i++) {
+        if (cells[i].innerHTML.trim() === "") {
+            cells[i].style.backgroundColor = "#232323";
+        }
+    }
+</script>
+{% endblock %}
+
+{% block main %}
+{% if alert %}    
+    <div class="alert alert-danger" role="alert">
+    {{ alert }}
+    </div>    
+{% endif %}
+<table id="user_table" class="table-bordered table-dark justify-content-center centered-table" >
+    <thead>
+        <tr>
+            <th>
+                <form action="/" method="post">
+                <input type="date" id="date" name="date" value="{{ date_value }}" style="background-color:#3bab82; color:white ">
+                <button class="btn" style="background-color:#3bab82; color:white " type="submit">&#10003;</button>
+                </form>
+            </th>
+            {% for  day in date["day"] %}
+            <th>{{ date["week_days"][loop.index0] }} {{ day }}.{{ date["month"][loop.index0] }}.</th>
+            {% endfor %}
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="background-color: #3bab82;">
+            <td>Muster zuordnen</td>
+            {% for date in date["date"] %}
+            <td>
+                {% for post in user_posts %}
+                    {% if post["day"] == date and post["thema"] == "Muster zuordnen" %}
+                        {{ post["start"] }}-{{ post["end"] }} {{ post["type"] }}                  
+                    {% endif %}
+                {% endfor %}
+            </td>
+            {% endfor %}
+        </tr>
+        <tr style="background-color: #3bab82;">
+            <td>Quantitative und formale Probleme</td>
+            {% for date in date["date"] %}
+            <td>
+                {% for post in user_posts %}
+                    {% if post["day"] == date and post["thema"] == "Quantitative und formale Probleme" %}
+                        {{ post["start"] }}-{{ post["end"] }} {{ post["type"] }}                  
+                    {% endif %}
+                {% endfor %}
+            </td>
+            {% endfor %}
+        </tr>
+        <tr style="background-color: #3bab82;">
+            <td>Schlauchfiguren</td>
+            {% for date in date["date"] %}
+            <td>
+                {% for post in user_posts %}
+                    {% if post["day"] == date and post["thema"] == "Schlauchfiguren" %}
+                        {{ post["start"] }}-{{ post["end"] }} {{ post["type"] }}                  
+                    {% endif %}
+                {% endfor %}
+            </td>
+            {% endfor %}
+        </tr>
+        <tr style="background-color: #3bab82;">
+            <td>Med./Naturw. Grundverständnis</td>
+            {% for date in date["date"] %}
+            <td>
+                {% for post in user_posts %}
+                    {% if post["day"] == date and post["thema"] == "Med./Naturw. Grundverständnis" %}
+                        {{ post["start"] }}-{{ post["end"] }} {{ post["type"] }}                  
+                    {% endif %}
+                {% endfor %}
+            </td>
+            {% endfor %}
+        </tr>
+        <tr style="background-color: #3bab82;">
+            <td>Figuren lernen</td>
+            {% for date in date["date"] %}
+            <td>
+                {% for post in user_posts %}
+                    {% if post["day"] == date and post["thema"] == "Figuren lernen" %}
+                        {{ post["start"] }}-{{ post["end"] }} {{ post["type"] }}                  
+                    {% endif %}
+                {% endfor %}
+            </td>
+            {% endfor %}
+        </tr>
+        <tr style="background-color: #3bab82;">
+            <td>Fakten lernen</td>
+            {% for date in date["date"] %}
+            <td>
+                {% for post in user_posts %}
+                    {% if post["day"] == date and post["thema"] == "Fakten lernen" %}
+                        {{ post["start"] }}-{{ post["end"] }} {{ post["type"] }}                  
+                    {% endif %}
+                {% endfor %}
+            </td>
+            {% endfor %}
+        </tr>
+        <tr style="background-color: #3bab82;">
+            <td>Textverständnis</td>
+            {% for date in date["date"] %}
+            <td>
+                {% for post in user_posts %}
+                    {% if post["day"] == date and post["thema"] == "Textverständnis" %}
+                        {{ post["start"] }}-{{ post["end"] }} {{ post["type"] }}                  
+                    {% endif %}
+                {% endfor %}
+            </td>
+            {% endfor %}
+        </tr>
+        <tr style="background-color: #3bab82;">
+            <td>Diagramme und Tabellen</td>
+            {% for date in date["date"] %}
+            <td>
+                {% for post in user_posts %}
+                    {% if post["day"] == date and post["thema"] == "Diagramme und Tabellen" %}
+                        {{ post["start"] }}-{{ post["end"] }} {{ post["type"] }}                  
+                    {% endif %}
+                {% endfor %}
+            </td>
+            {% endfor %}
+        </tr>
+    </tbody>
+</table>
+<div class="container-fluid">
+    <br>
+    <p>Übung hinzufügen</p>
+    <form method="post" action="/submit_post">   
+        <select class="btn dropdown-toggle" name="thema" id="thema" style="background-color: #3bab82;">
+            <option selected hidden>Wähle ein Thema</option>
+            <option>Muster zuordnen</option>
+            <option>Quantitative und formale Probleme</option>
+            <option>Schlauchfiguren</option>
+            <option>Med./Naturw. Grundverständnis</option>
+            <option>Figuren lernen</option>
+            <option>Fakten lernen</option>
+            <option>Textverständnis</option>
+            <option>Diagramme und Tablellen</option>
+        </select>
+        <select class="btn droppdown-toggle" name="type" id="type" style="background-color: #3bab82;">
+            <option selected hidden>Wähle die Art der Übung</option>
+            <option>Übung</option>
+            <option>Theorie</option>
+            <option>Simulation</option>
+            <option>Video/Meeting</option>
+            <option>Bootcamp</option>
+        </select>
+        <label>Start:</label> 
+        <input type="time" id="start" name="start" style="background-color: #3bab82;">
+        <label>Ende:</label>
+        <input type="time" id="end" name="end" style="background-color: #3bab82;">
+        <label>Tag:</label>
+        <input type="date" id="day" name="day" style="background-color: #3bab82;">
+        <input type="submit" class="btn" style="background-color: #3bab82;" value="Eintragen">
+    </form>
+    <br>
+    <p>Übung löschen</p>
+    <form method="post" action="/delete_post">
+        <select name="post_id" class="btn dropdown-toggle" style="background-color: #3bab82;">
+        <option selected hidden>Wähle eine Übung</option>
+        {% for post in user_posts %}
+        <option value="{{ post['post_id'] }}">{{ post["day"] }} {{ post["thema"] }} {{ post["type"] }}</option>
+        
+        {% endfor %}
+        </select>
+        <input type="submit" class="btn"  value="🗑️" style="background-color: #3bab82;">
+    </form>
+</div>
+{% endblock %}
