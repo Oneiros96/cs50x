@@ -84,4 +84,3 @@ Visit [Scratch](https://scratch.mit.edu/) to try the file.
 ### [Week 10 - Final Project](https://github.com/Oneiros96/cs50x/tree/main/Week%2010%20-%20Final%20Project/TMS%20-%20preparation%20tracker)
 #### TMS preparation tracker
 A simpel webapp to track your learning progress for the german TMS(Test für medizinische Studiengänge).
-[README.MD](https://github.com/Oneiros96/cs50x/blob/main/Week%2010%20-%20Final%20Project/TMS%20-%20preparation%20tracker/README.md)
