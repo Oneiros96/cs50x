@@ -1,8 +1,7 @@
 # cs50x
 
 These are my contributions to Havard's cs50x 22/23. If you are doing this course yourself rightnow, please mind the - [Academic Honesty](https://cs50.harvard.edu/x/2023/honesty/).
-If you are intrested in my final projekt for this course you can find it here:
-### [Final Projekt](https://github.com/Oneiros96/TMS-preparation-tracker)
+
 
 ## Table of Contents
 
@@ -82,3 +81,7 @@ Visit [Scratch](https://scratch.mit.edu/) to try the file.
    - [birthdays](https://github.com/Oneiros96/cs50x/tree/main/Week%209%20-%20Flask/birthdays)
    - [finance](https://github.com/Oneiros96/cs50x/tree/main/Week%209%20-%20Flask/finance)
     
+### [Week 10 - Final Project](https://github.com/Oneiros96/cs50x/tree/main/Week%2010%20-%20Final%20Project/TMS%20-%20preparation%20tracker)
+#### TMS preparation tracker
+A simpel webapp to track your learning progress for the german TMS(Test für medizinische Studiengänge).
+[README.MD](https://github.com/Oneiros96/cs50x/blob/main/Week%2010%20-%20Final%20Project/TMS%20-%20preparation%20tracker/README.md)
